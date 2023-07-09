@@ -30,4 +30,12 @@ class AppTheme {
       appBarTheme: const AppBarTheme(
         centerTitle: false,
       ));
+
+  AppTheme copyWith({
+    int? selectedColor,
+    bool? isDarkmode,
+  }) => AppTheme(
+    selectedColor: selectedColor ?? this.selectedColor,
+    isDarkmode: isDarkmode ?? this.isDarkmode
+  );
 }
